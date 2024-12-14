@@ -11,7 +11,9 @@ import {
   IAuthSlice,
 } from './slices/AuthSlice/CreateAuthSlice';
 
-interface IStore extends IAuthSlice {
+import { createAppSlice, IAppSlice } from './slices/AppSlice/CreateAppSlice';
+
+interface IStore extends IAuthSlice, IAppSlice {
   resetState: () => void;
 }
 
@@ -23,11 +25,13 @@ export const useStore = create(
     persist(
       (set, get, api) => ({
         ...createAuthSlice(set, get, api),
+        ...createAppSlice(set, get, api),
         resetState: () => {
           set(state => ({
             ...state,
             // Reset specific slices to their initial state
             ...createAuthSlice(set, get, api),
+            ...createAppSlice(set, get, api),
           }));
         },
       }),

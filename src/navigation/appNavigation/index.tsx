@@ -2,6 +2,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { FC } from 'react';
 import * as React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import AddTask from '~screens/addTask';
 import HomeScreen from '~screens/homeScreen';
 import { ScreensName } from '~theme/Strings';
 import { useTheme } from '~theme/ThemeContext';
@@ -23,6 +24,11 @@ export const AppStackScreen: FC = () => {
         <AppStack.Screen
           name={ScreensName.HomeScreen}
           component={HomeScreen}
+          options={navOptionHandler}
+        />
+        <AppStack.Screen
+          name={ScreensName.AddTaskScreen}
+          component={AddTask}
           options={navOptionHandler}
         />
       </AppStack.Navigator>

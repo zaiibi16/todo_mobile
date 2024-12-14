@@ -11,23 +11,19 @@ export const styles = StyleSheet.create({
     backgroundColor: Colors.background,
     paddingHorizontal: wp(5),
   },
-  contentContainer: {
-    alignItems: 'center',
-    marginTop: hp(7),
+  title: {
+    color: Colors.primaryBlue,
   },
-  textContainer: {
+  headerContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     alignItems: 'center',
-    marginVertical: hp(5),
-  },
-  subText: {
-    textAlign: 'center',
-    marginTop: hp(2),
-    color: Colors.darkGrey,
   },
   buttonContainer: {
-    marginTop: hp(10),
-  },
-  clearDataButton: {
-    marginTop: hp(25),
-  },
+    position: 'absolute',
+    width: '100%',
+    alignSelf: 'center',
+    bottom: 0
+  }
+
 });

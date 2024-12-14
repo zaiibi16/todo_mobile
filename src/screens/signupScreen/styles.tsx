@@ -11,23 +11,9 @@ export const styles = StyleSheet.create({
     backgroundColor: Colors.background,
     paddingHorizontal: wp(5),
   },
-  contentContainer: {
-    alignItems: 'center',
-    marginTop: hp(7),
-  },
-  textContainer: {
-    alignItems: 'center',
-    marginVertical: hp(5),
-  },
-  subText: {
-    textAlign: 'center',
-    marginTop: hp(2),
-    color: Colors.darkGrey,
-  },
-  buttonContainer: {
-    marginTop: hp(10),
-  },
-  clearDataButton: {
-    marginTop: hp(25),
-  },
+  title: {
+    color: Colors.primaryBlue,
+    marginTop: hp(5)
+  }
+
 });

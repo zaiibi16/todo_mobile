@@ -5,6 +5,7 @@ import { useTheme } from '~theme/ThemeContext';
 import { reset } from '~utils/NavigationUtils';
 import { ScreensName } from '~theme/Strings';
 import { useStore } from '~zustand';
+import { useUserDetailsService } from '~hooks/auth';
 
 const SplashScreen = () => {
   const { isAuth } = useStore(state => state);
@@ -13,7 +14,7 @@ const SplashScreen = () => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       reset(
-        false ? ScreensName.AppStackScreen : ScreensName.AuthStackScreen,
+        isAuth ? ScreensName.AppStackScreen : ScreensName.AuthStackScreen,
         {},
       );
     }, 500);

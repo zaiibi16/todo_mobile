@@ -18,8 +18,7 @@ interface PopNavigateProps {
 
 // Use this function to navigate to specific page when you are outisde of a component
 export const navigate: NavigateProps = (name, params) => {
-  if (isMountedRef.current && navigationRef.current) {
-    // Perform navigation if the app has mounted
+  if (navigationRef.current) {
     navigationRef.current.navigate(name, params);
     return;
   }

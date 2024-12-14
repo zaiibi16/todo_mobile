@@ -12,6 +12,10 @@ const Colors = {
   red: '#EB001B',
   stroke: '#ECEFF3',
   shadow: 'rgba(68, 84, 106, 0.30)',
+  lightSuccessBorder: '#48C1B5',
+  lightSuccessBackground: '#F6FFF9',
+  lightErrorBorder: '#F4B0A1',
+  lightErrorbackground: '#FFF5F3',
 };
 
 export default Colors;
