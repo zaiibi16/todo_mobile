@@ -9,10 +9,18 @@ export const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
     backgroundColor: Colors.background,
-    paddingHorizontal: wp(5),
   },
-  title: {
-    color: Colors.primaryBlue,
-    marginTop: hp(5),
+  listContainer: {
+    paddingHorizontal: wp(5),
+    paddingTop: hp(3),
+    paddingBottom: hp(10),
+  },
+  listItemContainer: {
+    marginVertical: wp(2),
+  },
+  noTaskTextStyle: {
+    textAlign: 'center',
+    marginTop: hp(20),
+    color: Colors.grey,
   },
 });

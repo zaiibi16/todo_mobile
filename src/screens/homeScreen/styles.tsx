@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
@@ -9,21 +9,21 @@ export const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
     backgroundColor: Colors.background,
-    paddingHorizontal: wp(5),
   },
   title: {
     color: Colors.primaryBlue,
   },
   headerContainer: {
+    paddingHorizontal: wp(5),
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
   },
   buttonContainer: {
+    paddingHorizontal: wp(5),
     position: 'absolute',
     width: '100%',
     alignSelf: 'center',
-    bottom: 0
-  }
-
+    bottom: 0,
+  },
 });

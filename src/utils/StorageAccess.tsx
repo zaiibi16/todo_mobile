@@ -7,8 +7,6 @@ export class AuthToken {
     return this.token;
   };
 }
-
-// import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as Keychain from 'react-native-keychain';
 
 export const storeToken = async (value: object) => {
@@ -17,11 +15,6 @@ export const storeToken = async (value: object) => {
   } catch (error) {
     console.error('Failed to store session token:', error);
   }
-  // try {
-  //   await AsyncStorage.setItem('@token', JSON.stringify(value));
-  // } catch (e) {
-  //   console.log(e);
-  // }
 };
 
 export const clearToken = async () => {
@@ -30,11 +23,6 @@ export const clearToken = async () => {
   } catch (error) {
     console.error('Failed to clear session token:', error);
   }
-  // try {
-  //   await AsyncStorage.removeItem(key);
-  // } catch (e) {
-  //   console.log(e);
-  // }
 };
 
 export const getToken = async () => {
@@ -51,13 +39,4 @@ export const getToken = async () => {
     console.error('Failed to retrieve session token:', error);
     return null;
   }
-
-  // try {
-  //   const value = await AsyncStorage.getItem('@token');
-  //   if (value !== null) {
-  //     return JSON.parse(value);
-  //   }
-  // } catch (e) {
-  //   console.log(e);
-  // }
 };

@@ -1,25 +1,22 @@
-import { View, Text } from 'react-native';
-import React, { useState } from 'react';
-import { Formik } from 'formik';
+import {View, Text} from 'react-native';
+import React, {useState} from 'react';
+import {Formik} from 'formik';
 
-import { useTheme } from '~theme/ThemeContext';
-import { ScreensName, Strings } from '~theme/Strings';
-import { getStyles } from './styles';
+import {useTheme} from '~theme/ThemeContext';
+import {ScreensName, Strings} from '~theme/Strings';
+import {getStyles} from './styles';
 import InputField from '~components/core/inputField';
 import Button from '~components/core/button';
 import TextButton from '~components/core/textButton';
-import { signinValidationSchema } from './signupValidationSchema';
-// import ErrorBlock from '~components/core/errorBlock';
-import { navigate } from '~utils/NavigationUtils';
-import Colors from '~theme/Colors';
-import { IRegisterProps } from '~services/auth/types';
-import { useRegisterService } from '~hooks/auth';
-
+import {signinValidationSchema} from './signupValidationSchema';
+import {navigate} from '~utils/NavigationUtils';
+import {IRegisterProps} from '~services/auth/types';
+import {useRegisterService} from '~hooks/auth';
 
 const SignUpForm = () => {
-  const { fonts } = useTheme();
+  const {fonts} = useTheme();
   const styles = getStyles();
-  const {registerUser} = useRegisterService()
+  const {registerUser} = useRegisterService();
   const [errorText, setErrorText] = useState<any>('');
 
   const submitHandler = async (values: IRegisterProps) => {
@@ -29,7 +26,7 @@ const SignUpForm = () => {
   return (
     <View style={styles.mainContainer}>
       <Formik
-        initialValues={{ username: '', password: '' }}
+        initialValues={{username: '', password: ''}}
         validationSchema={signinValidationSchema}
         onReset={() => {
           setErrorText('');

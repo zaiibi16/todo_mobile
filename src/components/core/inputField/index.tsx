@@ -1,9 +1,9 @@
-import { View, Text, TextInput, Pressable } from 'react-native';
-import React, { useState } from 'react';
+import {View, Text, TextInput, Pressable} from 'react-native';
+import React, {useState} from 'react';
 
-import { useTheme } from '~theme/ThemeContext';
-import { getStyles } from './styles';
-import { IInputFieldProps } from './types';
+import {useTheme} from '~theme/ThemeContext';
+import {getStyles} from './styles';
+import {IInputFieldProps} from './types';
 
 import ErrorIcon from '~assets/svg/ErrorIcon.svg';
 import EyeLash from '~assets/svg/EyeLash.svg';
@@ -21,7 +21,7 @@ const InputField = ({
   onPress,
   customLabelStyle,
 }: IInputFieldProps) => {
-  const { fonts, colors } = useTheme();
+  const {fonts, colors} = useTheme();
   const styles = getStyles();
   const [showPassword, setShowPassword] = useState(password);
   const inputFieldStyle = error ? styles.inputFieldError : styles.inputField;

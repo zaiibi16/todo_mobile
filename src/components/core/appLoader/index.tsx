@@ -1,11 +1,11 @@
-import { View, Text, ActivityIndicator } from 'react-native';
+import {View, ActivityIndicator} from 'react-native';
 import React from 'react';
-import { getStyles } from './styles';
-import { useTheme } from '~theme/ThemeContext';
-import { useStore } from '~zustand';
+import {getStyles} from './styles';
+import {useTheme} from '~theme/ThemeContext';
+import {useStore} from '~zustand';
 
 const AppLoader = () => {
-  const { colors } = useTheme();
+  const {colors} = useTheme();
   const appLoader = useStore(state => state.appLoader);
   const styles = getStyles();
   return (

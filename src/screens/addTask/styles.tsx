@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
@@ -29,7 +29,7 @@ export const styles = StyleSheet.create({
     color: Colors.darkGrey,
     shadowOpacity: 0.3,
     shadowColor: Colors.lightGrey,
-    shadowOffset: { width: 1, height: 2 },
+    shadowOffset: {width: 1, height: 2},
     elevation: 1,
     backgroundColor: Colors.white,
   },
@@ -38,5 +38,5 @@ export const styles = StyleSheet.create({
     width: '100%',
     alignSelf: 'center',
     bottom: 0,
-   }
+  },
 });

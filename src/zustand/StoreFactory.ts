@@ -1,15 +1,15 @@
 import deepMerge from 'deepmerge';
-import { MMKV } from 'react-native-mmkv';
-import { create } from 'zustand';
+import {MMKV} from 'react-native-mmkv';
+import {create} from 'zustand';
 import {
   persist,
   createJSONStorage,
   StateStorage,
   devtools,
 } from 'zustand/middleware';
-import { immer } from 'zustand/middleware/immer';
+import {immer} from 'zustand/middleware/immer';
 
-import { setType, persistOptionsType } from './types';
+import {setType, persistOptionsType} from './types';
 
 const storage = new MMKV();
 

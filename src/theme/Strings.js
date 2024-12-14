@@ -21,6 +21,7 @@ export const Strings = {
   ADDTASK: "Add Task",
   DONE: "Done",
   SESSIONEXPIRED: "Session Expired",
-  LOGINAGAIN:"Please login again to continue",
-  OK:"Ok"
+  LOGINAGAIN: "Please login again to continue",
+  OK: "Ok",
+  NOTASK: "No Tasks"
 };

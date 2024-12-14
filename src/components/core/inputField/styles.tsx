@@ -1,12 +1,12 @@
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from 'react-native-responsive-screen';
-import { useTheme } from '~theme/ThemeContext';
+import {useTheme} from '~theme/ThemeContext';
 
 export const getStyles = () => {
-  const { colors } = useTheme();
+  const {colors} = useTheme();
   return StyleSheet.create({
     inputField: {
       height: hp(5.8),
@@ -17,7 +17,7 @@ export const getStyles = () => {
       color: colors.darkGrey,
       shadowOpacity: 0.3,
       shadowColor: colors.lightGrey,
-      shadowOffset: { width: 1, height: 2 },
+      shadowOffset: {width: 1, height: 2},
       elevation: 1,
       backgroundColor: colors.white,
     },
@@ -31,7 +31,7 @@ export const getStyles = () => {
       color: colors.darkGrey,
       shadowOpacity: 0.3,
       shadowColor: colors.lightGrey,
-      shadowOffset: { width: 1, height: 2 },
+      shadowOffset: {width: 1, height: 2},
       elevation: 1,
       backgroundColor: colors.white,
     },

@@ -1,34 +1,32 @@
-import { View, Text } from 'react-native';
-import React, { useState } from 'react';
-import { Formik } from 'formik';
+import {View, Text} from 'react-native';
+import React, {useState} from 'react';
+import {Formik} from 'formik';
 
-import { useTheme } from '~theme/ThemeContext';
-import { ScreensName, Strings } from '~theme/Strings';
-import { getStyles } from './styles';
+import {useTheme} from '~theme/ThemeContext';
+import {ScreensName, Strings} from '~theme/Strings';
+import {getStyles} from './styles';
 import InputField from '~components/core/inputField';
 import Button from '~components/core/button';
 import TextButton from '~components/core/textButton';
-import { signinValidationSchema } from './signinValidationSchema';
-import { ISigninForm } from './types';
-import { navigate } from '~utils/NavigationUtils';
-import Colors from '~theme/Colors';
-import { useLoginService } from '~hooks/auth';
-
+import {signinValidationSchema} from './signinValidationSchema';
+import {ISigninForm} from './types';
+import {navigate} from '~utils/NavigationUtils';
+import {useLoginService} from '~hooks/auth';
 
 const LoginForm = () => {
-  const { fonts } = useTheme();
+  const {fonts} = useTheme();
   const styles = getStyles();
-  const {loginUser} = useLoginService()
+  const {loginUser} = useLoginService();
   const [errorText, setErrorText] = useState<any>('');
 
   const submitHandler = async (values: ISigninForm) => {
-    loginUser(values)
+    loginUser(values);
   };
 
   return (
     <View style={styles.mainContainer}>
       <Formik
-        initialValues={{ username: '', password: '' }}
+        initialValues={{username: '', password: ''}}
         validationSchema={signinValidationSchema}
         onReset={() => {
           setErrorText('');
@@ -41,7 +39,6 @@ const LoginForm = () => {
           errors,
           touched,
           handleReset,
-          isValid,
           initialValues,
         }) => (
           <View style={styles.formContainer}>

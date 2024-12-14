@@ -3,7 +3,7 @@ import {
   StackActions,
   CommonActions,
 } from '@react-navigation/native';
-import { createRef } from 'react';
+import {createRef} from 'react';
 
 export const navigationRef = createNavigationContainerRef();
 export const isMountedRef = createRef();

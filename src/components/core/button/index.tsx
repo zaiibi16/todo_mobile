@@ -1,8 +1,8 @@
-import { Text, Pressable, ActivityIndicator } from 'react-native';
+import {Text, Pressable, ActivityIndicator} from 'react-native';
 import React from 'react';
-import { useTheme } from '~theme/ThemeContext';
-import { IButtonProps } from './types';
-import { styles } from './styles';
+import {useTheme} from '~theme/ThemeContext';
+import {IButtonProps} from './types';
+import {styles} from './styles';
 
 const Button = ({
   title,
@@ -15,7 +15,7 @@ const Button = ({
   smallBtn,
   unFilled,
 }: IButtonProps) => {
-  const { fonts } = useTheme();
+  const {fonts} = useTheme();
 
   const widthStyle = smallBtn ? styles.smallBtn : {};
   const fillStyle = unFilled
@@ -29,13 +29,13 @@ const Button = ({
 
   return (
     <Pressable
-      style={({ pressed }) => [
+      style={({pressed}) => [
         styles.buttonContainer,
         widthStyle,
         fillStyle,
         disabledStyle,
         customStyle,
-        { opacity: pressed ? 0.7 : 1 },
+        {opacity: pressed ? 0.7 : 1},
       ]}
       disabled={disabled || isLoading}
       onPress={onPress}>

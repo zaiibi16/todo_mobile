@@ -1,15 +1,14 @@
-import { View, Text, Image } from 'react-native';
-import React, { useEffect } from 'react';
-import { styles } from './styles';
-import { useTheme } from '~theme/ThemeContext';
-import { reset } from '~utils/NavigationUtils';
-import { ScreensName } from '~theme/Strings';
-import { useStore } from '~zustand';
-import { useUserDetailsService } from '~hooks/auth';
+import {View, Text, Image} from 'react-native';
+import React, {useEffect} from 'react';
+import {styles} from './styles';
+import {useTheme} from '~theme/ThemeContext';
+import {reset} from '~utils/NavigationUtils';
+import {ScreensName} from '~theme/Strings';
+import {useStore} from '~zustand';
+import {useUserDetailsService} from '~hooks/auth';
 
 const SplashScreen = () => {
-  const { isAuth } = useStore(state => state);
-  // const { logoutUser } = useSessionExipred();
+  const {isAuth} = useStore(state => state);
 
   useEffect(() => {
     const timeout = setTimeout(() => {

@@ -1,6 +1,6 @@
-import { StateCreator } from 'zustand';
+import {StateCreator} from 'zustand';
 
-import { IUserData } from './authTypes';
+import {IUserData} from './authTypes';
 
 export interface IAuthSlice {
   isAuth: boolean;
@@ -18,9 +18,9 @@ const initialState = {
 export const createAuthSlice: StateCreator<IAuthSlice> = set => ({
   ...initialState,
   setIsAuth: (isAuth): void => {
-    set({ isAuth });
+    set({isAuth});
   },
   setUserData: (userData: IUserData | null): void => {
-    set({ userData: userData });
+    set({userData: userData});
   },
 });

@@ -1,4 +1,4 @@
-import { TextStyle } from 'react-native';
+import {TextStyle} from 'react-native';
 
 export interface IButtonProps {
   onPress?: () => void;

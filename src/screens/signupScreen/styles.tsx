@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
@@ -13,7 +13,6 @@ export const styles = StyleSheet.create({
   },
   title: {
     color: Colors.primaryBlue,
-    marginTop: hp(5)
-  }
-
+    marginTop: hp(5),
+  },
 });

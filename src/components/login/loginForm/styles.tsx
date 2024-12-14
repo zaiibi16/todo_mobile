@@ -1,13 +1,13 @@
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from 'react-native-responsive-screen';
 import Colors from '~theme/Colors';
-import { useTheme } from '~theme/ThemeContext';
+import {useTheme} from '~theme/ThemeContext';
 
 export const getStyles = () => {
-  const { colors } = useTheme();
+  const {colors} = useTheme();
   return StyleSheet.create({
     mainContainer: {
       flex: 1,
@@ -28,10 +28,10 @@ export const getStyles = () => {
       flexDirection: 'row',
       marginVertical: hp(1),
       alignSelf: 'center',
-      alignItems: 'center'
+      alignItems: 'center',
     },
     registerButtonColor: {
-      color: Colors.primaryBlue
+      color: Colors.primaryBlue,
     },
     errorBlockContainer: {
       position: 'absolute',

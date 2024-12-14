@@ -11,9 +11,9 @@ const ThemeContext = React.createContext({
 interface IThemeProvider {
   children: React.ReactNode;
 }
-export const ThemeProvider = ({ children }: IThemeProvider) => {
+export const ThemeProvider = ({children}: IThemeProvider) => {
   const themeData = React.useMemo(() => {
-    const theme = { fonts: Typography, colors: Colors };
+    const theme = {fonts: Typography, colors: Colors};
     return theme;
   }, []);
 

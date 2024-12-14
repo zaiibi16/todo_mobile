@@ -1,9 +1,9 @@
-import React, { FC } from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
-import { ScreensName } from '~theme/Strings';
+import React, {FC} from 'react';
+import {createStackNavigator} from '@react-navigation/stack';
+import {ScreensName} from '~theme/Strings';
 import SplashScreen from '~screens/splashScreen';
-import { AuthStackScreen } from '~navigation/authNavigation';
-import { AppStackScreen } from '~navigation/appNavigation';
+import {AuthStackScreen} from '~navigation/authNavigation';
+import {AppStackScreen} from '~navigation/appNavigation';
 
 const RootStack = createStackNavigator();
 

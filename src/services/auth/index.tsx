@@ -1,9 +1,7 @@
-import { authAxios, publicAxios } from 'axios-config';
-import { Constants } from '~theme/Constants';
-import { ILoginProps, IRegisterProps } from './types';
-import { END_POINT } from '~services/Endpoints';
-import { Alert } from 'react-native';
-
+import {authAxios, publicAxios} from 'axios-config';
+import {Constants} from '~theme/Constants';
+import {ILoginProps, IRegisterProps} from './types';
+import {END_POINT} from '~services/Endpoints';
 
 export const registerService = async (data: IRegisterProps) => {
   try {
@@ -13,7 +11,6 @@ export const registerService = async (data: IRegisterProps) => {
     return error;
   }
 };
-
 
 export const loginService = async (data: ILoginProps) => {
   try {
@@ -30,7 +27,7 @@ export const logoutService = async () => {
     return response?.data;
   } catch (error: any) {
     if (error?.response?.status == '401' || error?.response?.status == '403') {
-      return { response: null, error: Constants.INVALID_SESSION };
+      return {response: null, error: Constants.INVALID_SESSION};
     }
     return error;
   }
@@ -42,8 +39,8 @@ export const userDetailsService = async () => {
     return response?.data;
   } catch (error: any) {
     if (error?.response?.status == '401' || error?.response?.status == '403') {
-      return { response: null, error: Constants.INVALID_SESSION };
+      return {response: null, error: Constants.INVALID_SESSION};
     }
-    return { response: null, error: error };
+    return {response: null, error: error};
   }
 };

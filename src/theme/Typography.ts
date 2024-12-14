@@ -1,7 +1,7 @@
-import { heightPercentageToDP as hp } from 'react-native-responsive-screen';
+import {heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 //import Colors from './Colors';
-import { IThemeFonts } from './types';
+import {IThemeFonts} from './types';
 import Colors from './Colors';
 
 export const getDimensions = {

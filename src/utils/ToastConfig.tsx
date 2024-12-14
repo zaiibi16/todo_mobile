@@ -1,11 +1,11 @@
 import React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import {StyleSheet, View, Text} from 'react-native';
 import {
   heightPercentageToDP,
   widthPercentageToDP,
 } from 'react-native-responsive-screen';
 import Colors from '~theme/Colors';
-import { useTheme } from '~theme/ThemeContext';
+import {useTheme} from '~theme/ThemeContext';
 
 import SuccessToastIcon from '~assets/svg/SuccessToastIcon.svg';
 import ErrorToastIcon from '~assets/svg/ErrorToastIcon.svg';
@@ -30,8 +30,8 @@ interface IToastErrorProps {
 }
 
 export const toastConfig = {
-  successor: ({ text1, props }: IToastProps) => {
-    const { fonts } = useTheme();
+  successor: ({text1, props}: IToastProps) => {
+    const {fonts} = useTheme();
     return (
       <View style={[styles.successcontainer]}>
         <SuccessToastIcon />
@@ -42,8 +42,8 @@ export const toastConfig = {
       </View>
     );
   },
-  errorList: ({ text1, props }: IToastErrorProps) => {
-    const { fonts } = useTheme();
+  errorList: ({text1, props}: IToastErrorProps) => {
+    const {fonts} = useTheme();
     const error = props?.errors?.length ? props?.errors[0] : '';
 
     return (

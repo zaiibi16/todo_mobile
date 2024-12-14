@@ -1,12 +1,12 @@
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from 'react-native-responsive-screen';
-import { useTheme } from '~theme/ThemeContext';
+import {useTheme} from '~theme/ThemeContext';
 
 export const getStyles = () => {
-  const { colors } = useTheme();
+  const {colors} = useTheme();
   return StyleSheet.create({
     mainContainer: {
       padding: wp(1),

@@ -1,17 +1,14 @@
 // import zustandFlipper from 'react-native-flipper-zustand';
-import { MMKVLoader } from 'react-native-mmkv-storage';
-import { create } from 'zustand';
-import { persist, createJSONStorage } from 'zustand/middleware';
-import type { StateStorage } from 'zustand/middleware';
-import { immer } from 'zustand/middleware/immer';
+import {MMKVLoader} from 'react-native-mmkv-storage';
+import {create} from 'zustand';
+import {persist, createJSONStorage} from 'zustand/middleware';
+import type {StateStorage} from 'zustand/middleware';
+import {immer} from 'zustand/middleware/immer';
 
-import { PersistStateArray } from './PersistState';
-import {
-  createAuthSlice,
-  IAuthSlice,
-} from './slices/AuthSlice/CreateAuthSlice';
+import {PersistStateArray} from './PersistState';
+import {createAuthSlice, IAuthSlice} from './slices/AuthSlice/CreateAuthSlice';
 
-import { createAppSlice, IAppSlice } from './slices/AppSlice/CreateAppSlice';
+import {createAppSlice, IAppSlice} from './slices/AppSlice/CreateAppSlice';
 
 interface IStore extends IAuthSlice, IAppSlice {
   resetState: () => void;

@@ -1,4 +1,1 @@
-export const PersistStateArray = [
-  'isAuth',
-  'userData',
-];
+export const PersistStateArray = ['isAuth', 'userData'];

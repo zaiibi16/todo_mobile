@@ -1,4 +1,7 @@
-
 export interface IAddTaskProps {
-    description: string,
+  description: string;
+}
+
+export interface IMarkDoneProps {
+  _id: string;
 }
